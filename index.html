@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|IBM+Plex+Sans:300|News+Cycle|Noto+Sans+JP" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Archivo+Black|Fjalla+One|Lato:600|Roboto:600" rel="stylesheet">
+    <title>Spilup</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class = "tipografia-name" href="#Spilup">Games</a>
+            <nav class="menu">
+                <ol>
+                    <li>
+                        <a class="link" href="#Game">Game</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#How-to">How-to</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Equipos">Equipos</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="container-menu" id= "animation-menu">
+                <!-- <i class="icon-menu burguer-menu" id="burguer-menu" ></i> -->
+                <div class= "m bar1" id= "bar1"></div>
+                <div class="m bar2" id = "bar2"></div>
+            </div>
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+    <section class="hero" >
+        <div class="container-hero">
+            <h2>Games that redifine games</h2>
+        </div>
+    </section>
+    <section class="Catalog-games">
+        <div class="container-catalog">
+            Nuestros juegos
+        </div>
+    </section>
+    <section class="console">
+    </section>
+    <section class="contact">
+    </section>
+    <footer class="footer">
+    </footer>
+    <script>
+        const burgerBotton = document.getElementById("animation-menu");
+        const burgerBar1 = document.getElementById("bar1");
+        const burgerBar2 = document.getElementById("bar2");
+        const sidebar = document.getElementById("sidenav");
+
+        burgerBotton.addEventListener("click", animationMenu);
+        burgerBar1.addEventListener("animationend", pauseAnimaion);
+        function animationMenu(evento){
+            console.log("Si funciona");
+            // burgerBar1.style.animationName = "rotation1";
+            // burgerBar2.style.animationName = "rotation2";
+            burgerBar1.classList.toggle("change1");
+            burgerBar2.classList.toggle("change2");
+            sidebar.classList.toggle("cgnav")
+        }
+
+        // function pauseAnimaion() {
+        //     console.log("termino la animation")
+        //     burgerBar1.style.animationPlayState = "paused";
+        // }
+    </script>
+</body>
+</html>
